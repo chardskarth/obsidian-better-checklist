@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"id": "obsidian-better-checklist-plugin",
+	"name": "Better Checklist",
+	"version": "0.1.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Combines checklists across pages into the sidebar with configurable filters.",
+	"author": "Richard Glen Domingo",
+	"authorUrl": "https://blog.chardskarth.me",
+	"fundingUrl": "https://ko-fi.com/chardskarth",
 	"isDesktopOnly": false
 }
