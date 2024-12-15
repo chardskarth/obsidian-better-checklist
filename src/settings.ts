@@ -190,7 +190,7 @@ export class TodoSettingTab extends PluginSettingTab {
 		if (limit !== "upper") {
 			divControls.createDiv('icon').createDiv('movedown')
 				.addEventListener('click', (pointerEvent: PointerEvent) => {
-					const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerHTML
+					const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerText
 					this.moveFilterUpOrDown(filterName, "down")
 					pointerEvent.preventDefault()
 				});
@@ -199,7 +199,7 @@ export class TodoSettingTab extends PluginSettingTab {
 		if (limit !== "lower") {
 			divControls.createDiv('icon').createDiv('moveup')
 				.addEventListener('click', (pointerEvent: PointerEvent) => {
-					const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerHTML
+					const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerText
 					this.moveFilterUpOrDown(filterName, "up")
 					pointerEvent.preventDefault()
 				});
@@ -207,7 +207,7 @@ export class TodoSettingTab extends PluginSettingTab {
 
 		const checkboxContainer = divControls.createDiv('checkbox-container');
 		checkboxContainer.addEventListener('click', (pointerEvent: PointerEvent) => {
-			const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerHTML
+			const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerText
 			const checkboxInput = pointerEvent.currentTarget.querySelector("input")
 			checkboxInput.checked = !checkboxInput.checked
 			if (checkboxInput.checked) {
@@ -237,7 +237,7 @@ export class TodoSettingTab extends PluginSettingTab {
 
 		divControls.createDiv('icon').createDiv('delete')
 			.addEventListener('click', (pointerEvent: PointerEvent) => {
-				const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerHTML
+				const filterName = pointerEvent.target.closest("summary").querySelector(".setting-item:first-child .setting-item-name:first-child").innerText
 				this.deleteChecklistFilter(filterName)
 				pointerEvent.preventDefault()
 			});
@@ -299,7 +299,7 @@ export class TodoSettingTab extends PluginSettingTab {
 			.onClick(event => {
 
 				const querySelector = getQuerySelector(event.target)
-				const filterName = querySelector(".summaryHeading .setting-item .setting-item-name").innerHTML
+				const filterName = querySelector(".summaryHeading .setting-item .setting-item-name").innerText
 
 				const newFilterName = (querySelector('.setting-item:nth-child(2) input[type=text]') as HTMLInputElement).value
 
@@ -323,7 +323,7 @@ export class TodoSettingTab extends PluginSettingTab {
 				let selectedChecklistFilter = this.plugin.getSettingValue("selectedChecklistFilter")
 				if (filterName === selectedChecklistFilter) {
 					selectedChecklistFilter = newFilterName
-					querySelector(".summaryHeading .setting-item .setting-item-name").innerHTML = newFilterName
+					querySelector(".summaryHeading .setting-item .setting-item-name").textContent = newFilterName
 				}
 
 				this.plugin.updateSettings({

@@ -127,7 +127,7 @@ export default class TodoListView extends ItemView {
 					".better-checklist-settings-tab .checklist-filter .summaryHeading .setting-item-heading .setting-item-name"
 				)
 				const isThis = settingItemNames
-					.filter(x => x.innerHTML === this.plugin.getSettingValue("selectedChecklistFilter"))[0]
+					.filter(x => x.innerText === this.plugin.getSettingValue("selectedChecklistFilter"))[0]
 
 				isThis.closest(".summaryHeading").find("div.handle").click()
 
