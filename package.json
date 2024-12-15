@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-better-checklist",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A plugin for Obsidian which consolidates todo items into configurable views",
 	"main": "main.js",
 	"scripts": {
