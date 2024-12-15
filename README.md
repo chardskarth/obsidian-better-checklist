@@ -6,7 +6,8 @@ Hats off the author of the previous plugin!
 This plugin allows you to create task filters so you can group your tasks across
 your vault into checklists.
 
-// todo record 
+
+<video src="https://github.com/user-attachments/assets/a43292e0-29c5-45bb-8e65-3e0eb288c567"></video>
 
 ## Usage - Create a checklist filter
 
