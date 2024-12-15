@@ -120,7 +120,7 @@ export default class TodoListView extends ItemView {
 			onSettingsButtonClicked: async (ev: Event) => {
 				const setting = (this.app as any).setting;
 				await setting.open();
-				setting.openTabById('obsidian-better-checklist-plugin');
+				setting.openTabById('better-checklist');
 
 				// find the selected filter name's setting to expand on open
 				const settingItemNames = setting.containerEl.findAll(
