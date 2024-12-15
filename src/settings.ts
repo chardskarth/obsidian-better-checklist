@@ -88,8 +88,8 @@ export class TodoSettingTab extends PluginSettingTab {
 
 	private buildAddFilter() {
 		const thisSetting = new Setting(this.containerEl)
-		var textFilterName: TextComponent
-		var addFilterButton: ButtonComponent
+		let textFilterName: TextComponent
+		let addFilterButton: ButtonComponent
 
 		thisSetting.setName('Create a Filter')
 			.setDesc('Name your filter')
@@ -345,7 +345,7 @@ export class TodoSettingTab extends PluginSettingTab {
 
 
 	private moveFilterUpOrDown(filterName: string, direction: "up" | "down") {
-		var indexOfFilter = this.getChecklistFilterIndex(filterName)
+		const indexOfFilter = this.getChecklistFilterIndex(filterName)
 		if (indexOfFilter < 0) {
 			console.error(`Unexpected: Cannot find filterName: ${filterName}`)
 			return;

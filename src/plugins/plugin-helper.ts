@@ -30,14 +30,14 @@ export const regexPlugin = (
 
   return (md: MD) => {
     md.inline.ruler.push(id, (state, silent) => {
-      var match = _regexp.exec(state.src.slice(state.pos))
+      const match = _regexp.exec(state.src.slice(state.pos))
       if (!match) return false
 
       state.pos += match[0].length
 
       if (silent) return true
 
-      var token = state.push(id, '', 0)
+      const token = state.push(id, '', 0)
       token.meta = {match: match}
       return true
     })
