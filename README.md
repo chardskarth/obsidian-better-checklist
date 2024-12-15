@@ -6,28 +6,14 @@ Hats off the author of the previous plugin!
 This plugin allows you to create task filters so you can group your tasks across
 your vault into checklists.
 
-
 <video src="https://github.com/user-attachments/assets/a43292e0-29c5-45bb-8e65-3e0eb288c567"></video>
 
-## Usage - Create a checklist filter
-
-You have to create a filter so you can create a checklist.
-
-// record
-
-## Usage - View your checklists
-
-Adding multiple checklist filter, creates a consolidated view of all kinds of
-tasks in your vault.
-
-// record
-
-## Usage - Tagging your tasks
-
-This plugin assumes that you organize your tasks into specific tags.
-
-// screenshot tasks under a tag
-
+## Features
+- Create multiple checklist filters
+- Filter checklists by selecting which pages should match and find tasks from
+- Temporarily deactivate some checklist filters in the settings
+- Grouping your tasks by having top level tags
+  This plugin assumes that you organize your tasks into specific tags.
 
 ## Configuration
 
