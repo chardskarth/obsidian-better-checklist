@@ -39,7 +39,7 @@ export default class TodoPlugin extends Plugin {
 						.then(() => {
 							const todoLeaf = workspace.getLeavesOfType(TODO_VIEW_TYPE)[0]
 							workspace.revealLeaf(todoLeaf)
-							workspace.setActiveLeaf(todoLeaf, true, true)
+							workspace.setActiveLeaf(todoLeaf, { focus: true })
 						})
 				} else {
 					views[0].setViewState({
@@ -47,7 +47,7 @@ export default class TodoPlugin extends Plugin {
 						type: TODO_VIEW_TYPE,
 					})
 					workspace.revealLeaf(views[0])
-					workspace.setActiveLeaf(views[0], true, true)
+					workspace.setActiveLeaf(views[0], { focus: true })
 				}
 			},
 		})
@@ -83,7 +83,6 @@ export default class TodoPlugin extends Plugin {
 	}
 
 	async onunload() {
-		this.app.workspace.getLeavesOfType(TODO_VIEW_TYPE)[0]?.detach()
 	}
 
 	async loadSettings() {

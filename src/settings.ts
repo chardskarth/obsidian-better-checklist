@@ -45,10 +45,6 @@ export class TodoSettingTab extends PluginSettingTab {
 	display(): void {
 		this.containerEl.empty()
 
-		this.containerEl.createEl('h3', {
-			text: 'Better Checklist Settings',
-		})
-
 		this.buildSettings()
 	}
 
@@ -57,10 +53,6 @@ export class TodoSettingTab extends PluginSettingTab {
 		this.buildAddFilter()
 		this.buildFilterSettingRegion()
 		this.refreshFilterSettingRegion(true)
-
-		this.containerEl.createEl("h4", {
-			text: "General Settings"
-		})
 
 		new Setting(this.containerEl)
 			.setName('Look and feel')
