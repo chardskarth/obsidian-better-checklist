@@ -1,7 +1,7 @@
 {
 	"id": "better-checklist",
 	"name": "Better Checklist",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"minAppVersion": "0.15.0",
 	"description": "Combines checklists across pages into the sidebar with configurable filters.",
 	"author": "Richard Glen Domingo",
