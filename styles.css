@@ -53,11 +53,22 @@
   display:none;
 }
 
-.better-checklist-settings-tab h4.bottomBorderHeading {
+.better-checklist-settings-tab .settingSubsectionHeading {
   padding-bottom: .75em;
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
+.better-checklist-settings-tab .settingSubsectionHeading .setting-item-name{
+  font-weight: var(--h4-weight);
+  font-variant: var(--h4-variant);
+  letter-spacing: 0.015em;
+  line-height: var(--h4-line-height);
+  font-size: var(--h4-size);
+  color: var(--h4-color);
+  font-weight: var(--font-weight);
+  font-style: var(--h4-style);
+  font-family: var(--h4-font);
+}
 
 .checklist-plugin-main button {
   margin: initial;
@@ -75,6 +86,10 @@
 
 .checklist-filter > div:not(:first-child) {
   padding-left: 2em;
+}
+
+.checklist-filter:first-child summary {
+	padding-top: .75em;
 }
 
 .checklist-filter summary {

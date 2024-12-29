@@ -413,10 +413,9 @@ export class TodoSettingTab extends PluginSettingTab {
 	}
 
 	private buildFilterSettingRegion() {
-		this.containerEl.createEl("h4", {
-			text: "Checklist filters",
-			cls: 'bottomBorderHeading',
-		})
+		new Setting(this.containerEl)
+			.setName('Checklist filters').setHeading()
+			.setClass("settingSubsectionHeading");
 
 		this.filterRegion = this.containerEl.createEl("div")
 	}

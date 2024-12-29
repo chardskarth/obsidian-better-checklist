@@ -1,9 +1,9 @@
-import {CachedMetadata, parseFrontMatterTags, TagCache, TFile, Vault} from 'obsidian'
+import {CachedMetadata, parseFrontMatterTags, Platform, TagCache, TFile, Vault} from 'obsidian'
 
 import {LOCAL_SORT_OPT} from '../constants'
 
 import type {SortDirection, TagMeta, LinkMeta, KeysOfType} from 'src/_types'
-export const isMacOS = () => window.navigator.userAgent.includes('Macintosh')
+export const isMacOS = () => Platform.isMacOS
 export const classifyString = (str: string) => {
   const sanitzedGroupName = (str ?? '').replace(/[^A-Za-z0-9]/g, '')
   const dasherizedGroupName = sanitzedGroupName.replace(
