@@ -19,7 +19,7 @@ export default class TodoPlugin extends Plugin {
 		this.addSettingTab(new TodoSettingTab(this.app, this))
 		this.addCommand({
 			id: 'show-checklist-view',
-			name: 'Show Checklist Pane',
+			name: 'Show checklist pane',
 			callback: () => {
 				const workspace = this.app.workspace
 				const views = workspace.getLeavesOfType(TODO_VIEW_TYPE)
@@ -53,7 +53,7 @@ export default class TodoPlugin extends Plugin {
 		})
 		this.addCommand({
 			id: 'refresh-better-checklist',
-			name: 'Reload Checklist',
+			name: 'Reload checklist',
 			callback: async () => {
 				const loadedData = await this.loadData()
 				this.settings = { ...DEFAULT_SETTINGS, ...loadedData }

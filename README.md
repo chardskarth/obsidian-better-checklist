@@ -1,7 +1,7 @@
 Heavily inspired by [obsidian-checklist-plugin](https://github.com/delashum/obsidian-checklist-plugin).
 Hats off the author of the previous plugin!
 
-# Obsidian Better Checklist
+# Better Checklist
 
 This plugin allows you to create task filters so you can group your tasks across
 your vault into checklists.

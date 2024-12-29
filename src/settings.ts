@@ -63,7 +63,7 @@ export class TodoSettingTab extends PluginSettingTab {
 		})
 
 		new Setting(this.containerEl)
-			.setName('Look and Feel')
+			.setName('Look and feel')
 			.addDropdown(dropdown => {
 				dropdown.addOption('classic', 'Classic')
 				dropdown.addOption('compact', 'Compact')
@@ -74,7 +74,7 @@ export class TodoSettingTab extends PluginSettingTab {
 			})
 
 		new Setting(this.containerEl)
-			.setName('Auto Refresh List?')
+			.setName('Auto refresh list')
 			.addToggle(toggle => {
 				toggle.setValue(this.plugin.getSettingValue('autoRefresh'))
 				toggle.onChange(async value => {
@@ -91,7 +91,7 @@ export class TodoSettingTab extends PluginSettingTab {
 		let textFilterName: TextComponent
 		let addFilterButton: ButtonComponent
 
-		thisSetting.setName('Create a Filter')
+		thisSetting.setName('Create a filter')
 			.setDesc('Name your filter')
 			.addText(text => text
 				.setPlaceholder("Filter Name (e.g Next Actions / Waiting For)")
@@ -244,13 +244,13 @@ export class TodoSettingTab extends PluginSettingTab {
 		divControls.createDiv('icon').createDiv('handle');
 
 		new Setting(detailsContainer)
-			.setName('Filter Name')
+			.setName('Filter name')
 			.addText(text => text
 				.setValue(filter.filterName)
 			)
 
 		new Setting(detailsContainer)
-			.setName('Include Files')
+			.setName('Include files')
 			.setDesc(
 				sanitizeHTMLToDom(
 					'Include all files that matches this dataview pages query. See <a href="https://blacksmithgu.github.io/obsidian-dataview/#data-querying">Dataview JS Query</a>.',
@@ -273,7 +273,7 @@ export class TodoSettingTab extends PluginSettingTab {
 			)
 
 		new Setting(detailsContainer)
-			.setName("Limit Todos")
+			.setName("Limit todos")
 			.setDesc(
 				"This will limit the number of tasks per group. Leave empty or set to zero to display all tasks."
 			)
@@ -282,7 +282,7 @@ export class TodoSettingTab extends PluginSettingTab {
 					.setValue(filter.limitTodos.toString())
 			)
 
-		new Setting(detailsContainer).setName('Group By').addDropdown(dropdown => {
+		new Setting(detailsContainer).setName('Group by').addDropdown(dropdown => {
 			Object.values(GroupBy)
 				.filter(x => isNaN(Number(x)))
 				.forEach(key => {
@@ -422,7 +422,7 @@ export class TodoSettingTab extends PluginSettingTab {
 
 	private buildFilterSettingRegion() {
 		this.containerEl.createEl("h4", {
-			text: "Checklist Filters",
+			text: "Checklist filters",
 			cls: 'bottomBorderHeading',
 		})
 
