@@ -30,8 +30,8 @@
 	};
 	$: {
 		if (contentDiv) {
-			contentDiv.textContent = '';
-			contentDiv.insertAdjacentHTML('beforeend', item.rawHTML);
+			contentDiv.textContent = "";
+			item.renderContentInContent(contentDiv);
 		}
 	}
 </script>

@@ -23,9 +23,10 @@ import {
   todoLineIsChecked,
 } from './helpers'
 
-import type {
+import {
   App,
   LinkCache,
+  MarkdownRenderer,
   MetadataCache,
   TagCache,
   TFile,
@@ -206,7 +207,9 @@ const formTodo = (
     fileName: file.file.name,
     fileLabel: getFileLabelFromName(file.file.name),
     fileCreatedTs: file.file.stat.ctime,
-    rawHTML: md.render(tagStripped),
+    renderContentInContent: (contentDiv: HTMLElement) => {
+		MarkdownRenderer.render(app, tagStripped, contentDiv)
+	},
     line: lineNum,
     spacesIndented,
     fileInfo: file,
