@@ -208,7 +208,7 @@ const formTodo = (
     fileLabel: getFileLabelFromName(file.file.name),
     fileCreatedTs: file.file.stat.ctime,
     renderContentInContent: (contentDiv: HTMLElement) => {
-		MarkdownRenderer.render(app, tagStripped, contentDiv)
+		MarkdownRenderer.render(app, tagStripped, contentDiv, file.file.path, app.plugins.plugins['better-checklist'])
 	},
     line: lineNum,
     spacesIndented,
