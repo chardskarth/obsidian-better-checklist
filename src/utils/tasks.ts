@@ -31,6 +31,7 @@ import {
   TagCache,
   TFile,
   Vault,
+  Component,
 } from 'obsidian'
 import type {TodoItem, TagMeta, FileInfo} from 'src/_types'
 
@@ -208,7 +209,8 @@ const formTodo = (
     fileLabel: getFileLabelFromName(file.file.name),
     fileCreatedTs: file.file.stat.ctime,
     renderContentInContent: (contentDiv: HTMLElement) => {
-		MarkdownRenderer.render(app, tagStripped, contentDiv, file.file.path, app.plugins.plugins['better-checklist'])
+		const component = new Component()
+		MarkdownRenderer.render(app, tagStripped, contentDiv, file.file.path, component)
 	},
     line: lineNum,
     spacesIndented,
